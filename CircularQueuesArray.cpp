@@ -88,4 +88,18 @@ void display()
         cout << "Queue is empty\n";
         return;
     }
+
+    cout << "\nElements in the queue are...\n";
+
+    // jika FRONT <= REAR, iterasi dari FRONT hingga REAR
+    if (FRONT_Position <= REAR_Position)
+    {
+        while (FRONT_Position <= REAR_Position)
+        {
+            cout << queue_ARRAY[FRONT_Position] << " ";
+            FRONT_Position++;
+        }
+
+        cout << endl;
+    }
 }
