@@ -102,4 +102,23 @@ void display()
 
         cout << endl;
     }
+    else
+    {
+        // jika FRONT > REAR, iterasi dari FRONT hingga akhir array
+        while (FRONT_Position <= max - 1)
+        {
+            cout << queue_ARRAY[FRONT_Position] << " ";
+            FRONT_Position++;
+        }
+
+        // iterasi dari awal array hingga REAR
+        FRONT_Position = 0;
+        while (FRONT_Position <= REAR_Position)
+        {
+            cout << queue_ARRAY[FRONT_Position] << " ";
+            FRONT_Position++;
+        }
+
+        cout << endl;
+    }
 }
