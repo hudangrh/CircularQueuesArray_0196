@@ -1,6 +1,45 @@
+
+/**
+ * @mainpage Documentation Circular Queues
+ * 
+ * @section introduction Introduction
+ * Project ini merupakan project struktur data
+ * menggunakan struktur data queues dengan pendekatan circular arrays.
+ * 
+ * @section Operations
+ * project ini memiliki beberapa operasi antara lain:
+ * 1.Insert
+ * 2.Delete
+ * 3.Display
+ * 
+ * @section Cara Penggunaan
+ * berikut beberapa Menu yang bisa di gunakan:
+ * 1. en queue
+ * 2. de queue
+ * 3. display
+ * 4. exit
+ * 
+ * @author Profil
+ * - Nama : Huda Nugraha
+ * - Nim : 20250140196
+ * - Kelas : D
+ * 
+ * @brief
+ * @version 1.0
+ * @date 2026-06-08
+ * 
+ * @copyright huda.nugraha.ft25@mail.umy.ac.id
+ * 
+ */
+
 #include <iostream>
 using namespace std;
-
+/**
+ * @class Queues
+ * @brief class ini untuk operasi lengkap queues
+ * 
+ *  
+ */
 class Queues
 {
 private:
@@ -9,12 +48,21 @@ private:
     int queue_ARRAY[max];
 
 public:
+    /**
+     * @brief construct a new queues object
+     * set default queues null
+     * with front = -1 and rear = -1
+     */
     Queues()
     {
         FRONT = -1;
         REAR = -1;
     }
 
+    /**
+     * @brief method untuk memasukkan data dalam antrian
+     * data di masukkan dalam variable queue_array
+     */
     void insert()
     {
         int num;
@@ -46,6 +94,10 @@ public:
         queue_ARRAY[REAR] = num;
     }
 
+    /**
+     * @brief method untuk menghapus data dalam antrian
+     * data di hapuskan dari dalam variable queue_array
+     */
 void remove()
 {
        // cek apakah antrian kosong
@@ -76,10 +128,14 @@ void remove()
     }
 }
 
+/**
+ * @brief method untuk menampilkan data dalam antrian
+ * data di tampilkan dari dalam variable queue_array
+ */
 void display()
 {
-    int FRONT_Position = FRONT;
-    int REAR_Position = REAR;
+    int FRONT_Position = FRONT;  ///< variable front_position untuk menandakan posisi element pertama pada variable front
+    int REAR_Position = REAR;    ///< variable rear_position untuk menandakan posisi element terakhir pada variable rear
 
 
      // cek apakah antrian kosong
@@ -124,10 +180,15 @@ void display()
 }
 };
 
+/**
+ * @brief method utama untuk menjalankan program
+ * 
+ * @return int
+ */
 int main()
 {
-    Queues q;
-    char ch;
+    Queues q;///< objek untuk menggunakan member yang ada pada class queues
+    char ch;///< variable ch untuk menyimpan pilihan pada menu yang di berikan
 
     while (true)
     {
